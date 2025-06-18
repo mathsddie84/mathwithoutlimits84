@@ -1,0 +1,59 @@
+body
+{ background-image: url("fond_maaths.jpg");
+  background-repeat: no-repeat;
+  background-size: cover
+  }
+
+h1 {   
+font-size: 80px;
+}
+
+h2 {   
+font-size: 36px;
+font-family: Georgia, serif;
+list-style-type: none;
+background-color: #96e4d5 ; 
+overflow: hidden;
+margin: 30;
+padding: 30;
+display: flex;
+font-size: 24px;
+}
+
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #4acfe9  ; 
+      overflow: hidden;
+      display: flex;
+    font-size: 26px;
+    font-family: Arial, sans-serif;
+    }
+
+li {
+      flex: 1;
+      text-align: center;
+    }
+
+li a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 20px;
+    }
+
+li a:hover {
+      background-color: #86ccee;
+    }
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 20px
+}
+
+#modif {
+    font-family: Arial, sans-serif;
+    color: #868686;
+    font-size: 15px
+    }
