@@ -1,72 +1,115 @@
 <!doctype html>
 <html lang="fr">
- <head>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<script> src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- <link rel="stylesheet" href="site_maaths.css">
- <title>Math Without Limits </title>
-<link rel="stylesheet" href="style.css">
-    <style type="text/tailwindcss">
-      @theme {
-        --color-clifford: #000000;
-      }
-    </style>
- </head>
- <body>
- <h1 class="fond-bold" align="center">
-     MATH WITHOUT LIMITS
- </h1>
- <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
- <style>
-    h1 {
-        font-family: 'Amatic SC', cursive;
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Without Limits</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(120deg, #36d1c4 0%, #48c6ef 100%);
     }
- </style>
-<ul>
-  <li><a href="index.html" title="Accueil" target="_blank">
-      Accueil
-  </a></li>
-  <li><a href="maaths_6e.html" title="6e" target="_blank">
-      6e
-  </a></li>
-  <li><a href="maaths_5e.html" title="5e" target="_blank">
-      5e
-  </a></li>
-  <li><a href="maaths_4e.html" title="4e" target="_blank">
-      4e
-  </a></li>
-  <li><a href="maaths_3e.html" title="3e" target="_blank">
-      3e
-  </a></li>
-  <li><a href="maaths_2nde.html" title="2nde" target="_blank">
-      2nde
-  </a></li>
-  <li><a href="maaths_1ere.html" title="1ere" target="_blank">
-      1ere
-  </a></li>
-  <li><a href="maaths_tle.html" title="Tle" target="_blank">
-      Tle
-  </a></li>
-  <li><a href="maaths_algo.html" title="Math Without Limits in Algorithmic & Informatic" target="_blank">
-      Algo & Info
-  </a></li>
- <li><a href="maaths_epreuves.html" title="EPREUVES" target="_blank">
-      Epreuves
-  </a></li>
- </ul>
-<p> &rarr; <a href="index.html" title="Accueil" target="_blank">Accueil</a> </p>
-<p> &rarr; <a href="maaths_6e.html" title="6e" target="_blank">Niveau 6e</a> </p>
-<p> &rarr; <a href="maaths_5e.html" title="5e" target="_blank">Niveau 5e</a> </p>
-<p> &rarr; <a href="maaths_4e.html" title="4e" target="_blank">Niveau 4e</a> </p>
-<p> &rarr; <a href="maaths_3e.html" title="3e" target="_blank">Niveau 3e</a> </p>
-<p> &rarr; <a href="maaths_2nde.html" title="2nde" target="_blank">Niveau 2nde</a> </p>
-<p> &rarr; <a href="maaths_1ere.html" title="1ere" target="_blank">Niveau 1ere</a> </p>
-<p> &rarr; <a href="maaths_tle.html" title="Tle" target="_blank">Niveau Tle</a> </p>
-<p> &rarr; <a href="maaths_algo.html" title="Algo & Info" target="_blank">Algorithmique et Informatique</a> </p>
-<p> &rarr; <a href="maaths_epreuves.html" title="EPREUVES" target="_blank">Epreuves</a> </p>
-<p>Hey ! Ici un site pour retrouver de nombreuses notions de mathématiques !</p>
-<h2>Fonctionnement du site</h2>
+    header {
+      text-align: center;
+      padding: 2rem 0 1rem 0;
+      color: white;
+    }
+    h1 {
+      font-family: 'Amatic SC', cursive;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: rgba(255,255,255,0.1);
+      padding: 1rem 0;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background: rgba(0,0,0,0.15);
+    }
+    section {
+      max-width: 800px;
+      margin: auto;
+      background: rgba(255,255,255,0.9);
+      border-radius: 18px;
+      box-shadow: 0 6px 40px rgba(0,0,0,0.06);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .pdf-list {
+      list-style: none;
+      padding: 0;
+    }
+    .pdf-list li {
+      margin: 0.7em 0;
+    }
+    .pdf-list a {
+      color: #0fa9b6;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    .images-row {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+    .images-row img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+      background: #e6fcfc;
+    }
+    .contact-icons img {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+    @media (max-width: 600px) {
+      section { padding: 1rem; }
+      .images-row img { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MATH WITHOUT LIMITS</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="maaths_6e.html">6e</a>
+      <a href="maaths_5e.html">5e</a>
+      <a href="maaths_4e.html">4e</a>
+      <a href="maaths_3e.html">3e</a>
+      <a href="maaths_2nde.html">2nde</a>
+      <a href="maaths_1ere.html">1ère</a>
+      <a href="maaths_tle.html">Tle</a>
+      <a href="maaths_algo.html">Algo & Info</a>
+      <a href="maaths_epreuves.html">Epreuves</a>
+    </nav>
+  </header>
+  <section>
+    <h2>Fonctionnement du site</h2>
+    <p>Retrouvez ici de nombreuses notions de mathématiques, cours, exercices, fiches de révision et bien plus !</p>
 <p>Chaque niveau est divisé en maximum 5 parties, représentant les branches des mathématiques.</p>
 <p> &rarr; <strong><u>L'Arithmétique :</u></strong> L'étude de tous les nombres naturels (entiers réels et positifs). Elle se fait généralement par l'étude des nombres premiers au collège ou au lycée.</p>
 <p> &rarr; <strong><u>Les Statistiques et Probabilités :</u></strong> Les statistiques sont l'étude de données déjà relevées. Les probabilités sont quant à elles des suppositions quant à l'éxécution d'un évènement, une conception du hasard. Tout cela reste calculable mathématiquement :)</p>
@@ -80,44 +123,23 @@
 <p>Je travaille actuellement sur l'importation des fichiers pdf et des images... Just wait a sec!</p>
  <p>J'ai remarqué que le menu en haut de la page n'est pas pleinement accessible pour le moment sur téléphone, mais uniquement sur ordinateur et tablette. J'ai en place le menu cliquable en liste avec des flèches accessible depuis l'accueil uniquement, en attendant que je trouve une solution pour le format du menu cliquable en bande classique.</p>
 <p>L'année de Seconde est priorisée pour le moment, même si de l'informatique, de la Première, de la Troisième, et du contenu supplémentaire devraient arriver prochainement.</p>
-<h2>Coordonnées</h2>
- <p id="logo" style="float:right"><img src="ig.jpeg" /></p>
- <style>
-     img {
-    width: 50px;
-    height: 50px;
-    border: none;
-  -moz-border-radius : 75px;
-  -webkit-border-radius : 75px;
-  border-radius : 75px;
-    }
- </style>
-<p> &rarr; <strong><u>INSTAGRAM :</u></strong></p>
-<a href="https://www.instagram.com/maths__ddie/" target="_blank"> @maths__ddie</a>
- <p id="logo" style="float:right"><img src="ggmail.png" /></p>
-<p> &rarr; <strong><u>MAIL :</u></strong></p>
- <style>
-     img {
-    width: 50px;
-    height: 50px;
-    border: none;
-  -moz-border-radius : 75px;
-  -webkit-border-radius : 75px;
-  border-radius : 75px;
-    }
- </style>
-<p> bioretmaddie@gmail.com</p>
- <p id="logo" style="float:right"><img src="dd.png" /></p>
-<p> &rarr; <strong><u>DISCORD :</u></strong></p>
- <style>
-     img {
-    width: 50px;
-    height: 50px;
-    border: none;
-  -moz-border-radius : 75px;
-  -webkit-border-radius : 75px;
-  border-radius : 75px;
-    }
- </style>
-<a href="https://discord.com" target="_blank"> @mathsddie84</a>
- </body>
+    <h2>Contact</h2>
+    <p>
+      <span class="contact-icons">
+        <img src="ig.jpeg" alt="Instagram">
+        <a href="https://www.instagram.com/maths__ddie/" target="_blank">@maths__ddie</a>
+      </span>
+      <br>
+      <span class="contact-icons">
+        <img src="ggmail.png" alt="Mail">
+        bioretmaddie@gmail.com
+      </span>
+      <br>
+      <span class="contact-icons">
+        <img src="dd.png" alt="Discord">
+        @mathsddie84 sur Discord
+      </span>
+    </p>
+  </section>
+</body>
+</html>
