@@ -35,15 +35,30 @@
     nav a:hover {
       background: rgba(0,0,0,0.15);
     }
+    
     section {
-      max-width: 800px;
-      margin: auto;
-      background: rgba(255,255,255,0.9);
-      border-radius: 18px;
-      box-shadow: 0 6px 40px rgba(0,0,0,0.06);
-      padding: 2rem;
-      margin-bottom: 2rem;
-    }
+  width: 70%;
+  margin: 30px auto;
+  padding: 24px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 16px;
+}
+
+@media (max-width: 900px) {
+  section {
+    width: 90%;
+    margin: 20px auto;
+    padding: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    width: 98%;
+    margin: 10px auto;
+    padding: 12px;
+  }
+}
     .pdf-list {
       list-style: none;
       padding: 0;
