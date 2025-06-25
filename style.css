@@ -165,7 +165,7 @@ section:hover {
   box-shadow: 0 8px 40px rgba(0, 140, 180, 0.25), 0 2px 8px rgba(0,0,0,0.13);
 }
 
-.home-btn {
+.home-buttons {
   display: flex;
   flex-direction: column;
   gap: 2rem;
