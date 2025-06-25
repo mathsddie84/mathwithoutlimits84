@@ -162,5 +162,5 @@ section {
 }
 
 section:hover {
-  box-shadow: 0 8px 40px rgba(0, 140, 180, 0.18), 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 40px rgba(0, 140, 180, 0.25), 0 2px 8px rgba(0,0,0,0.13);
 }
