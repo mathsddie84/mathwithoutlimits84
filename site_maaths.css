@@ -60,3 +60,20 @@ p {
 
 .warning
 {color: red}
+
+logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;    /* espace au-dessus */
+  margin-bottom: 32px; /* espace en dessous */
+}
+
+.logo-img {
+  width: 140px;        /* adapte la taille à ta préférence */
+  height: auto;        /* conserve les proportions */
+  box-shadow: 0 8px 36px 0 rgba(0,140,180,0.25), 0 2px 8px rgba(0,0,0,0.13); /* ombre */
+  border-radius: 18px; /* coins arrondis, optionnel */
+  background: linear-gradient(135deg, #0fa9b6 0%, #0ed6a1 100%); /* si tu veux un fond dégradé derrière l'image */
+  padding: 16px;       /* pour espacer l'image du fond si besoin */
+}
