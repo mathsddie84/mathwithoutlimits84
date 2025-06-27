@@ -204,3 +204,9 @@ a-click {
 a-click:hover {
   color :#48c6ef
 }
+
+h3 {
+  color :#fff;
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
