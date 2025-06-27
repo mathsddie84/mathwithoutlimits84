@@ -198,6 +198,9 @@ a:hover {
 
 h2.click {
  font-weight: 900;
- font-size: 1.3rem;
- color :#48c6ef   
+ font-size: 1.3rem;   
+}
+
+h2.click:hover {
+  color :#48c6ef
 }
