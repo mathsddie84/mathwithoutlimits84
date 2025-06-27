@@ -8,6 +8,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Math Without Limits</title>
   <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.css' rel='stylesheet' />
+  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/main.min.js'></script>
 </head>
   <header>
     <h1>MATH WITHOUT LIMITS</h1>
@@ -28,5 +30,42 @@
   <a href="maaths_algo.html">Algo & Info</a>
   <a href="maaths_epreuves.html">Epreuves</a>
 </nav>
-
   </header>
+<body>
+    <div id='calendar'></div>
+   <button onclick="exportEvents()">Exporter les événements</button>
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+     var calendarEl = document.getElementById('calendar');
+     var calendar = new FullCalendar.Calendar(calendarEl, {
+       initialView: 'dayGridMonth',
+       editable: true,
+       selectable: true,
+       events: [],
+       dateClick: function(info) {
+         var title = prompt('Titre de l\'événement ?');
+         if (title) {
+           calendar.addEvent({
+             title: title,
+             start: info.dateStr
+           });
+            }
+       }
+     });
+     calendar.render();
+
+     window.exportEvents = function() {
+       var events = calendar.getEvents().map(ev => ({
+         title: ev.title,
+         start: ev.startStr,
+         end: ev.endStr
+       }));
+       var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(events, null, 2));
+       var dlAnchor = document.createElement('a');
+       dlAnchor.setAttribute("href", dataStr);
+       dlAnchor.setAttribute("download", "evenements_calendrier.json");
+       dlAnchor.click();
+     }
+   });
+   </script>
+</body>
